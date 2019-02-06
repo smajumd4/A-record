@@ -6,9 +6,15 @@
 /* ------
 global styles
 -------*/
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
 
 body {
-  /* background-image: url("../images/brown.jpeg"); */
+  background-color: #FFF7D3;
 }
 
 
@@ -93,7 +99,7 @@ board styles
 
 .pin {
   position: absolute;
-  display: inline-flex;
+  /* display: inline-flex; */
   top: 5px;
   left: 5px;
   z-index: 100;
@@ -113,15 +119,28 @@ board styles
 }
 .grdSmall2 {
   grid-area: grid-small-2;
-  background-color: yellow;
 }
 .second {
   display: grid;
   height: 400px;
-  width: 90%;
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
   background-color: grey;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template:
     'grid-big grid-big grid-small-1 grid-small-2'
     'grid-big grid-big grid-small-1 .'
     'grid-big grid-big . .';
+}
+
+.sticky-note {
+  font-size: 1em;
+  background-color: yellow;
+  width: 90%;
+  height: 90%;
+  margin-left: 8px;
+  /* margin-right: auto;
+  margin-top: auto; */
+  text-align: center;
 }
