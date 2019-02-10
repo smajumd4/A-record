@@ -1,7 +1,11 @@
-@import url('https://fonts.googleapis.com/css?family=Alfa+Slab+One|Marck+Script');
+@import url('https://fonts.googleapis.com/css?family=Alfa+Slab+One|Dancing+Script:400,700|Just+Another+Hand|Open+Sans+Condensed:700|Pacifico|Permanent+Marker');
 
 /* font-family: 'Alfa Slab One', cursive; */
-/* font-family: 'Marck Script', cursive; */
+/* font-family: 'Open Sans Condensed', sans-serif;
+font-family: 'Permanent Marker', cursive;
+font-family: 'Dancing Script', cursive;
+font-family: 'Pacifico', cursive;
+font-family: 'Just Another Hand', cursive;*/
 
 /* ------
 global styles
@@ -14,9 +18,8 @@ html {
 }
 
 body {
-  background-color: #FFF7D3;
+  background-color: #EFE5B8;
 }
-
 
 .img {
   width: 100%;
@@ -33,23 +36,23 @@ body {
   z-index: 50;
   background-image: url("../images/note.png");
   background-size: cover;
+  font-family: 'Pacifico', cursive;
 }
 
 .year-1 > p {
-  line-height: 10vw;
-  font-size: 2vw;
+  line-height: 8vw;
+  font-size: 2.5vw;
   text-align: center;
   transform: rotate(-5deg);
+  color: #CE3835;
 }
 
 .content-wrap {
-  max-width: 90vw;
+  width: 90vw;
   margin-top: 40vh;
   margin: 0 auto;
-  padding: 50px;
+  padding: 4vw;
   overflow: hidden;
-  padding-bottom: 25px;
-  z-index: 2;
 }
 
 h2 {
@@ -61,19 +64,6 @@ h2 {
   box-shadow: 0.1vw 0.1vw 0.6vw black;
 }
 
-.note-1 {
-  height: 20vw;
-  width: 35vw;
-  margin: 2vw 1vw 2vw 1vw;
-  background-color: #fff;
-  background-image:
-  linear-gradient(90deg, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px),
-  linear-gradient(#eee .1em, transparent .1em);
-  background-size: 100% 2vw;
-  font-size: 2vw;
-  float: left;
-  z-index: 20;
-}
 
 /* header styles */
 header {
@@ -88,7 +78,6 @@ header {
   background-size: cover;
   transform: rotate(20deg);
   z-index: 100;
-
 }
 
 /* ------
@@ -98,7 +87,7 @@ board styles
 /* sem 1 */
 
 .sem-1 {
-  height: 200vw;
+  height: 190vw;
   width: 85vw;
   position: relative;
   background:
@@ -109,8 +98,8 @@ board styles
     linear-gradient(rgba(183,120,49,0.6),rgba(183,120,49,.3));
   background-color:#ce863c;
   background-size:8px 8px;
-  border: 2.5vw ridge;
-  border-color: #9e4c12;
+  border: 2vw ridge;
+  border-color: #A86110;
 }
 
 .pin-img {
@@ -122,31 +111,47 @@ board styles
   z-index: 30;
 }
 
-/* .title1 {
-  display: inline-block;
-  width: 100%;
-  margin-top: 2vh;
-  padding: 1vw 2vw;
-
+.note-1 {
+  height: 20vw;
+  width: 38vw;
+  margin: 2vw 1vw 2vw 1vw;
+  background-color: #F2FBFF;
+  background-image:
+  linear-gradient(90deg, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px),
+  linear-gradient(#eee .1em, transparent .1em);
+  background-size: 100% 2vw;
+  font-size: 2.2vw;
+  float: left;
+  z-index: 20;
+  padding: 1.2vw 1.2vw;
+  position: relative;
+  font-weight: 700;
+  color: #424749;
 }
-
-h2 {
-  font-size: 4.5vh;
-  width: 24vw;
-  margin: auto;
-  padding: 1vw;
-  background-color: white;
-  line-height: 8vh;
-  text-align: center;
-} */
 
 .sem-1 .note-1 {
   transform: rotate(5deg);
+  transform: translateX(-2vw);
+}
+
+.note-1 .nt {
+  transform: rotate(-10deg);
+  font-family: 'Dancing Script', cursive;
+}
+
+.pin-3 {
+  position: absolute;
+  top: 7vw;
+  right: 10vw;
+  height: 4vw;
+  width: 4vw;
+  background-image: url("../images/pin-4.png");
+  background-size: cover;
+  z-index: 30;
 }
 
 .pin {
   position: absolute;
-  /* display: inline-flex; */
   top: 1vw;
   left: 0.5vw;
   z-index: 200;
@@ -199,7 +204,16 @@ transform: rotate(-8deg);
   linear-gradient(#a9b6c6 .1em, transparent .1em);
   background-size: 100% 2vw;
   transform: translateY(4vw);
+  padding: 0 1.2vw;
+  font-family: 'Just Another Hand', cursive;
 }
+
+.grdSmall1 > p {
+  line-height: 2.6vw;
+  font-size: 2.6vw;
+  color: #3F2626
+}
+
 .grdSmall2 {
   grid-column-start: 4;
   grid-column-end: 5;
@@ -219,6 +233,10 @@ transform: rotate(-8deg);
   transform: translateY(-6vw);
 }
 
+.sticky-note {
+  font-family: 'Permanent Marker', cursive;
+  color: #444;
+}
 .sn1 > p {
   line-height: 5vw;
   text-align: center;
@@ -244,44 +262,93 @@ transform: rotate(-8deg);
 
 .note-3 {
   float: left;
-  background-color: #fff;
+  background-color: #eae6cc;
   background-image:
-  linear-gradient(90deg, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px),
-  linear-gradient(#eee .1em, transparent .1em);
+  linear-gradient(90deg, transparent 79px, #BF9999 79px,#BF9999 81px, transparent 81px),
+  linear-gradient(#BF9999 .05em, transparent .05em);
   background-size: 100% 2vw;
   font-size: 2vw;
   height: 25vw;
   width: 35vw;
+  padding: 2vw 1.5vw;
+  font-family: 'Dancing Script', cursive;
+  font-weight: 700;
+  color: #302512;
 }
 
+.pin-img-1 {
+  margin-left: -1vw;
+}
 
 /* part four */
 .fourth {
-  height: 62vw;
+  height: 50vw;
   width: 80vw;
   margin: 2vw auto;
   margin-left: 3vw;
 }
-.fourth > div {
+.fourth > div:nth-child(odd) {
   position: relative;
   display: inline-block;
   background-color: green;
-  height: 30vw;
-  width: 34vw;
+  height: 25vw;
+  width: 33vw;
+  margin: 0.3vw;
+}
+.fourth > div:nth-child(even) {
+  position: relative;
+  display: inline-block;
+  background-color: green;
+  height: 25vw;
+  width: 35vw;
   margin: 0.3vw;
 }
 
 .note-4 {
   background-color: #fff;
   background-image:
-  linear-gradient(90deg, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px),
-  linear-gradient(#eee .1em, transparent .1em);
+  linear-gradient(90deg, transparent 79px, #eff9ff 79px, #eff9ff 81px, transparent 81px);
   background-size: 100% 2vw;
-  font-size: 2vw;
+  font-size: 3vw;
   height: 20vw;
-  width: 70vw;
-  margin-left: 3vw;
-  margin-top: 4vw;
+  width: 40vw;
+  margin-left: 12vw;
+  margin-top: 2vw;
+  padding: 0 1.2vw;
+  z-index: 30;
+  position: relative;
+}
+
+.note-4 > p {
+  height: 4vw;
+  padding-top: 3vw;
+  text-align: left;
+  font-family: 'Dancing Script', cursive;
+  font-weight: 700;
+  color: #a5452b;
+}
+
+.pizza-img {
+  height: 3.5vw;
+  width: 3.5vw;
+  position: absolute;
+  top: -2vw;
+  right: -2vw;
+  z-index: 300;
+  background-image: url("../images/pizza.png");
+  background-size: cover;
+  transform: rotate(10deg);
+}
+.pizza-img2 {
+  height: 3.5vw;
+  width: 3.5vw;
+  position: absolute;
+  bottom: -1.5vw;
+  left: -1.5vw;
+  z-index: 300;
+  background-image: url("../images/pizza.png");
+  background-size: cover;
+  transform: rotate(-170deg);
 }
 
 .img-1 {
@@ -290,12 +357,12 @@ transform: rotate(-8deg);
 }
 
 .img-2 {
-  background-image: url("../images/sem-2-5.jpg");
+  background-image: url("../images/sem2.jpg");
   background-size: cover;
 }
 
 .img-3 {
-  background-image: url("../images/sem-2-3.jpg");
+  background-image: url("../images/summer.jpg");
   background-size: cover;
 }
 
@@ -304,6 +371,112 @@ transform: rotate(-8deg);
   background-size: cover;
 }
 
-@media query {
+/* media queries */
+
+@media screen and (max-width: 700px) {
+  .sem-1 {
+    height: 420vw;
+  }
+  /* first part */
+  .first {
+    height: 94vw;
+  }
+  .pin-img {
+    width: 80%;
+    margin-left: 4vw;
+  }
+  .pin {
+    width: 5vw;
+    height: 4.5vw;
+  }
+  .note-1 {
+    width: 72vw;
+    height: 30vw;
+    background-size: 100% 3.5vw;
+    font-size: 3.5vw;
+    left: 2vw;
+  }
+  .note-1 .nt {
+    transform: rotate(-3deg);
+  }
+  .pin-3 {
+    top: 67vw;
+    right: 8vw;
+  }
+
+  /* second part */
+  .second {
+    width: 72vw;
+    height: 100vw;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 25% 25%;
+    grid-gap: 1vw;
+  }
+
+  .grdBig {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+
+  .grdSmall1 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    text-align: center;
+    background-size: 100% 5vw;
+    transform: none;
+  }
+
+  .grdSmall1 > p {
+    line-height: 4vw;
+    font-size: 5vw;
+  }
+
+  .grdSmall2 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    transform: none;
+  }
+
+  .grdSmall3 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    transform: none;
+  }
+
+  .sticky-note > p {
+    font-size: 4vw;
+    line-height: 4vw;
+  }
+
+  /* third part */
+  .third {
+    height: 110vw;
+  }
+  .note-3 {
+    height: 45vw;
+    width: 60vw;
+    font-size: 4vw;
+    line-height: 4.5vw;
+    background-size: 100% 5vw;
+  }
+  /* last part */
+  .note-4 {
+    margin-top: 2vw;
+    height: 30vw;
+    font-size: 4vw;
+  }
+
+  .pizza-img, .pizza-img2 {
+    width: 5vw;
+    height: 5vw;
+  }
 
 }
