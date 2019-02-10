@@ -24,13 +24,32 @@ body {
   left: 0;
   z-index: 20;
 }
+.year-1 {
+  height: 14vw;
+  width: 14vw;
+  position: absolute;
+  top: 2vh;
+  left: 4vw;
+  z-index: 50;
+  background-image: url("../images/note.png");
+  background-size: cover;
+}
+
+.year-1 > p {
+  line-height: 10vw;
+  font-size: 2vw;
+  text-align: center;
+  transform: rotate(-5deg);
+}
 
 .content-wrap {
-  max-width: 950px;
+  max-width: 90vw;
+  margin-top: 40vh;
   margin: 0 auto;
   padding: 50px;
   overflow: hidden;
   padding-bottom: 25px;
+  z-index: 2;
 }
 
 h2 {
@@ -39,20 +58,37 @@ h2 {
 }
 
 .ntObj {
-  box-shadow: 2px 2px 5px black;
+  box-shadow: 0.1vw 0.1vw 0.6vw black;
 }
 
 .note-1 {
-  height: 200px;
-  max-width: 45%;
-  margin: 5vh 2vh 5vh 8vh;
+  height: 20vw;
+  width: 35vw;
+  margin: 2vw 1vw 2vw 1vw;
   background-color: #fff;
   background-image:
   linear-gradient(90deg, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px),
   linear-gradient(#eee .1em, transparent .1em);
-  background-size: 100% 1.2em;
+  background-size: 100% 2vw;
+  font-size: 2vw;
   float: left;
   z-index: 20;
+}
+
+/* header styles */
+header {
+  position: absolute;
+  left: 70vw;
+  top:3vw;
+  overflow: hidden;
+  width: 30vw;
+  height: 10vw;
+  /* background-color: red; */
+  background-image: url("../images/lights-1.png");
+  background-size: cover;
+  transform: rotate(20deg);
+  z-index: 100;
+
 }
 
 /* ------
@@ -62,7 +98,9 @@ board styles
 /* sem 1 */
 
 .sem-1 {
-  height: 1000px;
+  height: 200vw;
+  width: 85vw;
+  position: relative;
   background:
     radial-gradient(#c37a35 15%, transparent 16%) 0 0,
     radial-gradient(#c37a35 15%, transparent 16%) 8px 8px,
@@ -71,7 +109,7 @@ board styles
     linear-gradient(rgba(183,120,49,0.6),rgba(183,120,49,.3));
   background-color:#ce863c;
   background-size:8px 8px;
-  border: 15px ridge;
+  border: 2.5vw ridge;
   border-color: #9e4c12;
 }
 
@@ -79,19 +117,28 @@ board styles
   float: left;
   position: relative;
   width: 40%;
-  margin-left: 3vh;
+  margin-left: 3vw;
   transform: rotate(-8deg);
   z-index: 30;
 }
 
-.title1 {
+/* .title1 {
   display: inline-block;
-  font-size: 150%;
-  margin: 10px;
+  width: 100%;
   margin-top: 2vh;
-  padding: 5px 10px;
-  background-color: white;
+  padding: 1vw 2vw;
+
 }
+
+h2 {
+  font-size: 4.5vh;
+  width: 24vw;
+  margin: auto;
+  padding: 1vw;
+  background-color: white;
+  line-height: 8vh;
+  text-align: center;
+} */
 
 .sem-1 .note-1 {
   transform: rotate(5deg);
@@ -100,47 +147,163 @@ board styles
 .pin {
   position: absolute;
   /* display: inline-flex; */
-  top: 5px;
-  left: 5px;
-  z-index: 100;
-  height: 12%;
-  width: 10%;
+  top: 1vw;
+  left: 0.5vw;
+  z-index: 200;
+  height: 3.5vw;
+  width: 3.5vw;
+}
+.first {
+  height: 33vw;
+  width: 80vw;
+  margin: 3vw auto;
+  margin-top: 5vw;
 }
 
 /* part2 */
 
-.grdBig {
-  grid-area: grid-big;
-  background-color: red;
-}
-.grdSmall1 {
-  grid-area: grid-small-1;
-  background-color: green;
-}
-.grdSmall2 {
-  grid-area: grid-small-2;
-}
 .second {
   display: grid;
-  height: 400px;
-  width: 95%;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: grey;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template:
-    'grid-big grid-big grid-small-1 grid-small-2'
-    'grid-big grid-big grid-small-1 .'
-    'grid-big grid-big . .';
+  height: 25vw;
+  width: 70vw;
+  margin: 5vh auto;
+  grid-template-columns: 23.5% 23.5% 27% 20%;
+  grid-template-rows: 25% 25% 25% 25%;
+  grid-column-gap: 1vw;
 }
 
-.sticky-note {
-  font-size: 1em;
-  background-color: yellow;
-  width: 90%;
-  height: 90%;
-  margin-left: 8px;
-  /* margin-right: auto;
-  margin-top: auto; */
+.sticky-note > p {
+line-height: 2vw;
+font-size: 1.5vw;
+text-align: center;
+transform: rotate(-8deg);
+}
+
+.grdBig {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 5;
+  background-image: url("../images/sem-1-2.jpg");
+  background-size: cover;
+}
+
+.grdSmall1 {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 4;
+  background-color: #FFCAD4;
+  background-image:
+  linear-gradient(90deg, transparent 79px, #8e8789 79px, #8e8789 81px, transparent 81px),
+  linear-gradient(#a9b6c6 .1em, transparent .1em);
+  background-size: 100% 2vw;
+  transform: translateY(4vw);
+}
+.grdSmall2 {
+  grid-column-start: 4;
+  grid-column-end: 5;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  background-image: radial-gradient(#f2e35f, #f5ed73);
+  transform: translateY(-7vw);
+}
+
+.grdSmall3 {
+  grid-column-start: 4;
+  grid-column-end: 5;
+  grid-row-start: 3;
+  grid-row-end: 5;
+  background-image: radial-gradient(#f2e35f, #f5ed73);
+  margin-top: 1vw;
+  transform: translateY(-6vw);
+}
+
+.sn1 > p {
+  line-height: 5vw;
   text-align: center;
+  transform: rotate(0deg);
+}
+/* part third */
+.third {
+  height: 30vw;
+  width: 75vw;
+  margin: 1vw auto;
+}
+
+.third > p {
+  margin-right: 4vw;
+  margin-left: 2vw;
+}
+
+.pin-1 {
+  width: 2.5vw;
+  height: 2.5vw;
+  left: 2vw;
+}
+
+.note-3 {
+  float: left;
+  background-color: #fff;
+  background-image:
+  linear-gradient(90deg, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px),
+  linear-gradient(#eee .1em, transparent .1em);
+  background-size: 100% 2vw;
+  font-size: 2vw;
+  height: 25vw;
+  width: 35vw;
+}
+
+
+/* part four */
+.fourth {
+  height: 62vw;
+  width: 80vw;
+  margin: 2vw auto;
+  margin-left: 3vw;
+}
+.fourth > div {
+  position: relative;
+  display: inline-block;
+  background-color: green;
+  height: 30vw;
+  width: 34vw;
+  margin: 0.3vw;
+}
+
+.note-4 {
+  background-color: #fff;
+  background-image:
+  linear-gradient(90deg, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px),
+  linear-gradient(#eee .1em, transparent .1em);
+  background-size: 100% 2vw;
+  font-size: 2vw;
+  height: 20vw;
+  width: 70vw;
+  margin-left: 3vw;
+  margin-top: 4vw;
+}
+
+.img-1 {
+  background-image: url("../images/sem-2-1.jpg");
+  background-size: cover;
+}
+
+.img-2 {
+  background-image: url("../images/sem-2-5.jpg");
+  background-size: cover;
+}
+
+.img-3 {
+  background-image: url("../images/sem-2-3.jpg");
+  background-size: cover;
+}
+
+.img-4 {
+  background-image: url("../images/sem-2-2.jpg");
+  background-size: cover;
+}
+
+@media query {
+
 }
